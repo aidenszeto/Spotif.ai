@@ -1,12 +1,29 @@
+Copy
 <!DOCTYPE html>
-
-<html lang="en">
-  <head>
-    <title>spotif.ai</title>
-    <script src="backend.js"></script>
-  </head>
-  <body>
-    <input type="file" id="myFile" multiple size="50" onchange="getMetadata()">
-    <p id="metadata"></p>
-  </body>
+<html>
+    <head>
+        <title>Detect Faces Sample</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    </head>
+    <body>
+      <script type="text/javascript" src="backend.js">
+      </script>
+      <h1>Detect Faces:</h1>
+      Enter the URL to an image that includes a face or faces, then click
+      the <strong>Analyze face</strong> button.<br><br>
+      Image to analyze: <input type="text" name="inputImage" id="inputImage"
+          value="https://upload.wikimedia.org/wikipedia/commons/c/c3/RH_Louise_Lillian_Gish.jpg" />
+      <button onclick="processImage()">Analyze face</button><br><br>
+      <div id="wrapper" style="width:1020px; display:table;">
+          <div id="jsonOutput" style="width:600px; display:table-cell;">
+              Response:<br><br>
+              <textarea id="responseTextArea" class="UIInput"
+                  style="width:580px; height:400px;"></textarea>
+          </div>
+          <div id="imageDiv" style="width:420px; display:table-cell;">
+              Source image:<br><br>
+              <img id="sourceImage" width="400" />
+          </div>
+      </div>
+    </body>
 </html>

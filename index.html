@@ -3,12 +3,10 @@
 <html lang="en">
   <head>
     <title>spotif.ai</title>
-    <script src=""></script>
+    <script src="backend.js"></script>
   </head>
   <body>
-    <form action="/action_page.php">
-    <input type="file" id="myFile" name="filename">
-    <input type="submit">
-    </form>
+    <input type="file" id="myFile" multiple size="50" onchange="getMetadata()">
+    <p id="metadata"></p>
   </body>
 </html>

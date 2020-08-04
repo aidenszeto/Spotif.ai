@@ -60,8 +60,8 @@ export default class EditPlaylist extends Component {
 
     console.log(playlist);
 
-    axios.post('http://localhost:5000/playlists/update/' + this.props.match.params.id, playlist)
-      .then((res) => console.log(res.data));
+    axios.post('http://localhost:5000/playlists/update/'+this.props.match.params.id, playlist)
+      .then(res => console.log(res.data));
 
     window.location = '/';
   }
@@ -73,7 +73,7 @@ export default class EditPlaylist extends Component {
         <h3>edit playlist</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group">
-            <label>Link: </label>
+            <label>link: </label>
             <input type="text"
                 required
                 className="form-control"
@@ -82,7 +82,7 @@ export default class EditPlaylist extends Component {
                 />
           </div>
           <div className="form-group">
-            <label>Emotion: </label>
+            <label>emotion: </label>
             <input  type="text"
                 required
                 className="form-control"
@@ -91,7 +91,7 @@ export default class EditPlaylist extends Component {
                 />
           </div>
           <div className="form-group">
-            <label>Age: </label>
+            <label>age: </label>
             <input
                 required
                 type="text"
@@ -102,7 +102,7 @@ export default class EditPlaylist extends Component {
           </div>
 
           <div className="form-group">
-            <input type="submit" value="Edit Playlist" className="btn btn-primary" />
+            <input type="submit" value="edit playlist" className="btn btn-primary" />
           </div>
         </form>
       </div>

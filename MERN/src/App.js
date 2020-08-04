@@ -15,7 +15,7 @@ function App() {
         <br/>
         <Route path="/" exact component={PlaylistList} />
         <Route path="/create" component={CreatePlaylist} />
-        <Route path="/edit" component={EditPlaylist} />
+        <Route path="/edit/:id" component={EditPlaylist} />
       </div>
     </Router>
   );

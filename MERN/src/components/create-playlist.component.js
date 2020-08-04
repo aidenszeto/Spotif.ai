@@ -59,7 +59,7 @@ export default class CreatePlaylist extends Component {
         <h3>add playlist</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group">
-            <label>Link: </label>
+            <label>link: </label>
             <input  type="text"
                 required
                 className="form-control"
@@ -68,7 +68,7 @@ export default class CreatePlaylist extends Component {
                 />
           </div>
           <div className="form-group">
-            <label>Emotion: </label>
+            <label>emotion: </label>
             <input  type="text"
                 required
                 className="form-control"
@@ -77,7 +77,7 @@ export default class CreatePlaylist extends Component {
                 />
           </div>
           <div className="form-group">
-            <label>Age: </label>
+            <label>age: </label>
             <input
                 required
                 type="text"
@@ -88,7 +88,7 @@ export default class CreatePlaylist extends Component {
           </div>
 
           <div className="form-group">
-            <input type="submit" value="Add Playlist" className="btn btn-primary" />
+            <input type="submit" value="add playlist" className="btn btn-primary" />
           </div>
         </form>
       </div>

@@ -9,6 +9,9 @@ const Playlist = props => (
     </td>
     <td>{props.playlist.emotion}</td>
     <td>{props.playlist.age}</td>
+    <td>
+      <Link to={"/edit/"+props.playlist._id}>edit</Link> | <a href="#" onClick={() => { props.deleteExercise(props.playlist._id) }}>delete</a>
+    </td>
   </tr>
 )
 
@@ -56,6 +59,7 @@ export default class PlaylistList extends Component {
               <th>link</th>
               <th>emotion</th>
               <th>age</th>
+              <th>actions</th>
             </tr>
           </thead>
           <tbody>

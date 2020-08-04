@@ -10,7 +10,7 @@ const Playlist = props => (
     <td>{props.playlist.emotion}</td>
     <td>{props.playlist.age}</td>
     <td>
-      <Link to={"/edit/"+props.playlist._id}>edit</Link> | <a href="#" onClick={() => { props.deleteExercise(props.playlist._id) }}>delete</a>
+      <Link to={"/edit/"+props.playlist._id}>edit</Link> | <a href="#" onClick={() => { props.deletePlaylist(props.playlist._id) }}>delete</a>
     </td>
   </tr>
 )

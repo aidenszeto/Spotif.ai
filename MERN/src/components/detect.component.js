@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { detect } from '../detect'
+import { detect } from '../API/detect'
 import axios from 'axios';
 
 export default class Home extends Component {
@@ -13,7 +13,16 @@ export default class Home extends Component {
         <text>
         enter image url: <br />
         <input type="text" name="inputImage" id="inputImage" value="" />
-        <button onclick="processImage()">analyze</button><br /><br />
+        <button onclick={() => {
+          const params = {
+            url,
+            returnFaceAttributes,
+          };
+          processImage(params)
+            .then((response) => response.json())
+            .catch(console.error);
+        }}>analyze</button><br /><br />
+
         <div id="wrapper" style={{width: "1020px", display: "table"}}>
             <div id="jsonOutput" style={{width: "600px", display: "table-cell"}}>
                 JSON: <br />

@@ -33,11 +33,12 @@ export default class Home extends Component {
     }).then(function (response) {
         //console.log(response.data)
         response.data.forEach((face) => {
+          let age = face.faceAttributes.age
+          let emotion = JSON.stringify(face.faceAttributes.emotion)
           console.log('Face ID: ' + face.faceId)
-          console.log('Age: ' + face.faceAttributes.age)
-          console.log('Emotion: ' + JSON.stringify(face.faceAttributes.emotion))
+          console.log('Age: ' + age)
+          console.log('Emotion: ' + emotion)
           console.log()
-          let json =  'age: ' + face.faceAttributes.age + '\nemotion: ' + JSON.stringify(face.faceAttributes.emotion)
         });
     }).catch(function (error) {
         console.log(error)
@@ -70,7 +71,7 @@ export default class Home extends Component {
             <input type="submit" value="analyze" className="btn btn-primary" />
           </div> <br />
           <div>
-            <label>json:</label>
+            <label>check console for json</label>
           </div>
         </form>
       </div>

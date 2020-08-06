@@ -32,6 +32,12 @@ router.route('/:id').get((req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
+router.route('/:emotion').get((req,res) => {
+  Playlist.findByEmotion(req.params.emotion)
+    .then(playlists => res.json(playlists))
+    .catch(err => res.status(400).json('Error: ' + err));
+})
+
 // Delete specific item from database by id
 router.route('/:id').delete((req, res) => {
   Playlist.findByIdAndDelete(req.params.id)

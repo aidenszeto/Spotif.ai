@@ -11,7 +11,7 @@ router.route('/').get((req, res) => {
 // Create new entry in databse with link, emotion, and age
 router.route('/add').post((req, res) => {
   const link = req.body.link;
-  const emotion = req.body.emotion;
+  const emotion = Number(req.body.emotion);
   const age = Number(req.body.age);
 
   const newPlaylist = new Playlist({
@@ -32,12 +32,6 @@ router.route('/:id').get((req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.route('/:emotion').get((req,res) => {
-  Playlist.findByEmotion(req.params.emotion)
-    .then(playlists => res.json(playlists))
-    .catch(err => res.status(400).json('Error: ' + err));
-})
-
 // Delete specific item from database by id
 router.route('/:id').delete((req, res) => {
   Playlist.findByIdAndDelete(req.params.id)
@@ -50,7 +44,7 @@ router.route('/update/:id').post((req, res) => {
   Playlist.findById(req.params.id)
     .then(playlist => {
       playlist.link = req.body.link;
-      playlist.emotion = req.body.emotion;
+      playlist.emotion = Number(req.body.emotion);
       playlist.age = Number(req.body.age);
 
       playlist.save()

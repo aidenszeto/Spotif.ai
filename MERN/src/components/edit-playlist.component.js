@@ -12,7 +12,7 @@ export default class EditPlaylist extends Component {
 
       this.state = {
         link: '',
-        emotion: '',
+        emotion: 0.0,
         age: 0
       }
   }

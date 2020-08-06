@@ -12,7 +12,7 @@ export default class CreatePlaylist extends Component {
 
       this.state = {
         link: '',
-        emotion: '',
+        emotion: 0.0,
         age: 0
       }
   }

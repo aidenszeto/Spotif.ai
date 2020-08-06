@@ -7,7 +7,7 @@ export default class Home extends Component {
       this.onChangeURL = this.onChangeURL.bind(this);
 
       this.state = {
-        url: ''
+        url: '',
       }
   }
 
@@ -18,6 +18,10 @@ export default class Home extends Component {
     let endpoint = 'https://spotifai.cognitiveservices.azure.com/face/v1.0/detect'
     // Optionally, replace with your own image URL (for example a .jpg or .png URL).
     let imageUrl = url.toString()
+    let resultJSON = {
+      "age": 0,
+      "emotions": ""
+    }
     axios({
         method: 'post',
         url: endpoint,
@@ -34,14 +38,16 @@ export default class Home extends Component {
         //console.log(response.data)
         response.data.forEach((face) => {
           let age = face.faceAttributes.age
-          let emotion = JSON.stringify(face.faceAttributes.emotion)
+          let emotion = face.faceAttributes.emotion
+          resultJSON = {
+            "age": age,
+            "emotions": emotion
+          }
+          let score = resultJSON["emotions"]["happiness"]
           console.log('Face ID: ' + face.faceId)
           console.log('Age: ' + age)
-          console.log('Emotion: ' + emotion)
-          console.log()
-
+          console.log('Happiness: ' + parseInt(JSON.stringify(score)))
           //axios connect to db and retrieve matches
-
         });
     }).catch(function (error) {
         console.log(error)

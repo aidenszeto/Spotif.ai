@@ -39,6 +39,9 @@ export default class Home extends Component {
           console.log('Age: ' + age)
           console.log('Emotion: ' + emotion)
           console.log()
+
+          //axios connect to db and retrieve matches
+
         });
     }).catch(function (error) {
         console.log(error)

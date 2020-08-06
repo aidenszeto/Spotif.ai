@@ -43,10 +43,10 @@ export default class Home extends Component {
             "age": age,
             "emotions": emotion
           }
-          let score = resultJSON["emotions"]["happiness"]
+          let score = parseFloat(JSON.stringify(resultJSON["emotions"]["happiness"]))
           console.log('Face ID: ' + face.faceId)
           console.log('Age: ' + age)
-          console.log('Happiness: ' + parseInt(JSON.stringify(score)))
+          console.log('Happiness: ' + score)
           //axios connect to db and retrieve matches
         });
     }).catch(function (error) {
@@ -80,7 +80,7 @@ export default class Home extends Component {
             <input type="submit" value="analyze" className="btn btn-primary" />
           </div> <br />
           <div>
-            <label>check console for json</label>
+            <label>check console for age and score</label>
           </div>
         </form>
       </div>

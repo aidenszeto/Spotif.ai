@@ -11,13 +11,13 @@ export default class Home extends Component {
       }
   }
 
-  onSubmit(e) {
+  submitForm(e, url) {
     const axios = require('axios').default;
     // Add a valid subscription key and endpoint to your environment variables.
     let subscriptionKey = "b2cf0902bf004b89b2a5096c2df5e0e3"
     let endpoint = 'https://spotifai.cognitiveservices.azure.com/face/v1.0/detect'
     // Optionally, replace with your own image URL (for example a .jpg or .png URL).
-    let imageUrl = "https://media.beliefnet.com/~/media/photos-with-attribution/people_groups/woman-happy-african-american-smiling-laughing_credit-shutterstock.jpg"
+    let imageUrl = url.toString()
     axios({
         method: 'post',
         url: endpoint,
@@ -37,7 +37,7 @@ export default class Home extends Component {
           console.log('Age: ' + face.faceAttributes.age)
           console.log('Emotion: ' + JSON.stringify(face.faceAttributes.emotion))
           console.log()
-          let json = 'age: ' + face.faceAttributes.age + '\nemotion: ' + JSON.stringify(face.faceAttributes.emotion)
+          let json =  'age: ' + face.faceAttributes.age + '\nemotion: ' + JSON.stringify(face.faceAttributes.emotion)
         });
     }).catch(function (error) {
         console.log(error)
@@ -55,10 +55,11 @@ export default class Home extends Component {
     return (
       <div>
         <h3>analyze image</h3> <br />
-        <form onSubmit={this.onSubmit}>
+        <form onSubmit={(e) => this.submitForm(e, document.getElementById("link").value)}>
           <div className="form-group">
             <label>link: </label>
-            <input  type="text"
+            <input type="text"
+                id="link"
                 required
                 className="form-control"
                 value={this.state.url}

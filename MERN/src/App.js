@@ -6,7 +6,7 @@ import Navbar from "./components/navbar.component";
 import PlaylistList from "./components/playlist-list.component";
 import CreatePlaylist from "./components/create-playlist.component";
 import EditPlaylist from "./components/edit-playlist.component"
-import Home from "./components/home"
+import Detect from "./components/detect.component"
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <div className="container">
         <Navbar />
         <br/>
-        <Route path="/" exact component={Home} />
+        <Route path="/" exact component={Detect} />
         <Route path="/playlists" component={PlaylistList} />
         <Route path="/create" component={CreatePlaylist} />
         <Route path="/edit/:id" component={EditPlaylist} />

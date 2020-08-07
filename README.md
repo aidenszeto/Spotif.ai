@@ -40,8 +40,8 @@ Although the database must currently be populated manually, a script using [Spot
     "age": <Number>,
   }
 ```
-**Link:** url to a unique spotify playlist
-**Emotion:** decimal value for playlists' happiness index
+**Link:** url to a unique spotify playlist\
+**Emotion:** decimal value for playlists' happiness index\
 **Age:** integer value used to determine recommendation accuracy
 
 ## Contact

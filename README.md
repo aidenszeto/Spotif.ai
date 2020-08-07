@@ -8,9 +8,10 @@ Follow these steps to get started!
 - Retrieve free Azure key for [Microsoft Face](https://azure.microsoft.com/en-us/services/cognitive-services/face/)
 - Set up [MongoDB](https://www.mongodb.com/) database and retrieve custom uri by clicking connect
 - Add API key, MongoDB URI, and custom endpoint (if different from code) to .env file as follows\
-  ``ATLAS_URI=<custom_uri>``\
-  ``API_KEY=<azure_key>``\
-  ``ENDPOINT=<azure_endpoint>``
+ ```ATLAS_URI=<custom_uri>
+    API_KEY=<azure_key>
+    ENDPOINT=<azure_endpoint>
+ ```
 - Once your database is connected, run ``nodemon server`` and ``npm start``
 - Test out your web app with different picture urls!
 

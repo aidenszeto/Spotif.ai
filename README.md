@@ -14,7 +14,7 @@ Follow these steps to get started!
     ENDPOINT=<azure_endpoint>
  ```
 - Once your database is connected, run ``nodemon server`` and ``npm start``
-- Test out your web app with different picture urls!
+- Test out your web app with different image urls!
 
 ## Features
 ### Analyze your Image

@@ -7,6 +7,6 @@ Follow these quick steps to get started!
 - Retrieve Azure key for [Microsoft Face](https://azure.microsoft.com/en-us/services/cognitive-services/face/)
 - Set up [MongoDB](https://www.mongodb.com/) database and connect using custom uri
 - Add API key and MongoDB URI to .env file as follows\
-  ``ATLAS_URI=<custom_uri>\
-    API_KEY=<azure_key>``
+  ``ATLAS_URI=<custom_uri>``
+  ``API_KEY=<azure_key>``
 

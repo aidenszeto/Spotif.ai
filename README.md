@@ -33,14 +33,12 @@ Although the database must currently be populated manually, a script using [Spot
 
 ## Database Schema
 ```
-[
   {
     "_id": <unique MongoDB id>
     "link": <String>,
     "emotion": <Number>,
     "age": <Number>,
   }
-]
 ```
 
 ## Contact

@@ -17,5 +17,5 @@ Follow these steps to get started!
 ## Features
 ### Analyze your image!
 Type in the url of your image and click the "analyze image" button to display the detected happiness index and recommended playlist. The code for this component can be found under
-/MERN/src/components/detect.component.js
+**/MERN/src/components/detect.component.js**
 

@@ -15,4 +15,6 @@ Follow these steps to get started!
 - Test out your web app with different picture urls!
 
 ## Features
+### Analyze your image!
+Type in the url of your image and click the "analyze image" button to display the detected happiness index and recommended playlist.
 

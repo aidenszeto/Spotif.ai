@@ -10,5 +10,5 @@ Follow these steps to get started!
   ``ATLAS_URI=<custom_uri>``\
   ``API_KEY=<azure_key>``
 - Once your database is connected, run\
-  ``nodemon server`` and \``npm start`` to start your localhost
+  ``nodemon server`` and\ ``npm start`` to start your localhost
 - Test out your web app with different picture urls!

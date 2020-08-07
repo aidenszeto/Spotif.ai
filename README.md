@@ -5,8 +5,8 @@ Spotif.ai automatically detects your mood and recommends you the perfect Spotify
 ## Getting Started
 Follow these steps to get started!
 - Clone this repository to download the code
-- Retrieve free Azure key and endpoint for [Microsoft Face](https://azure.microsoft.com/en-us/services/cognitive-services/face/)
-- Set up [MongoDB](https://www.mongodb.com/) database and retrieve custom uri by clicking connect
+- Retrieve free API key and corresponding endpoint for [Microsoft Face](https://azure.microsoft.com/en-us/services/cognitive-services/face/) from Azure Cognitive Services
+- Set up [MongoDB](https://www.mongodb.com/) database and retrieve custom uri by connecting by network
 - Add API key, MongoDB URI, and custom endpoint (if different from code) to .env file as follows\
  ```
     ATLAS_URI=<custom_uri>

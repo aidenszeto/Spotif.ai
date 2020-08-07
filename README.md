@@ -9,5 +9,6 @@ Follow these steps to get started!
 - Add API key and MongoDB URI to .env file as follows\
   ``ATLAS_URI=<custom_uri>``\
   ``API_KEY=<azure_key>``
-- Once your database is connected, run ``nodemon server`` and ``npm start`` to start your localhost
+- Once your database is connected, run\
+  ``nodemon server`` and \``npm start`` to start your localhost
 - Test out your web app with different picture urls!

@@ -17,5 +17,6 @@ Follow these steps to get started!
 ## Features
 ### Analyze your image!
 Type in the url of your image and click the "analyze image" button to display the detected happiness index and recommended playlist. The code for this component can be found under
-**/MERN/src/components/detect.component.js**
-
+**/MERN/src/components/detect.component.js**.
+### Playlists
+This page will display the current playlists in your MongoDB database. To edit or delete entries, simply click the link to the right of the playlist and change the values. The code for this component can be found under **/MERN/src/components/playlist-list.component.js** and **/MERN/src/components/edit-playlist.component.js**.

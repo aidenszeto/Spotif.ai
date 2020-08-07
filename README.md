@@ -40,9 +40,10 @@ Although the database must currently be populated manually, a script using [Spot
     "age": <Number>,
   }
 ```
-**Link:** url to a unique spotify playlist\
-**Emotion:** decimal value for playlists' happiness index\
-**Age:** integer value used to determine recommendation accuracy
+**_id**: unique identifier given to every MongoDB entry\
+**link:** url to a unique spotify playlist\
+**emotion:** decimal value for playlists' happiness index\
+**age:** integer value used to determine recommendation accuracy
 
 ## Contact
 Created by [Aiden Szeto](https://www.linkedin.com/in/aidenszeto/) - feel free to contact me!

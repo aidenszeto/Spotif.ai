@@ -33,7 +33,6 @@ router.route('/:score').get((req, res) => {
 });
 
 
-
 // Delete specific item from database by id
 router.route('/:id').delete((req, res) => {
   Playlist.findByIdAndDelete(req.params.id)

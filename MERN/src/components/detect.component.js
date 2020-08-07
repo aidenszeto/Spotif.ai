@@ -43,10 +43,11 @@ export default class Home extends Component {
             "age": age,
             "emotions": emotion
           }
-          let score = parseFloat(JSON.stringify(resultJSON["emotions"]["happiness"]))
+          let score = JSON.stringify(resultJSON["emotions"]["happiness"])
           console.log('Age: ' + age)
-          console.log('Happiness: ' + score)
-          //axios connect to db and retrieve closest match to score
+          console.log('Happiness: ' + parseFloat(score))
+          axios.get('http://localhost:5000/playlists/'+score)
+            .then(response => { console.log(response.data)});
         });
     }).catch(function (error) {
         console.log(error)

@@ -83,7 +83,7 @@ export default class Home extends Component {
             <input type="submit" value="analyze" className="btn btn-primary" />
           </div> <br />
           <div>
-            <label>check console for age and score</label>
+            <label>check console for playlist!</label>
           </div>
         </form>
       </div>

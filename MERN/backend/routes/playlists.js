@@ -26,11 +26,13 @@ router.route('/add').post((req, res) => {
 });
 
 // Get specific item from database by id
-router.route('/:id').get((req, res) => {
-  Playlist.findById(req.params.id)
+router.route('/:score').get((req, res) => {
+  Playlist.find({emotion: req.params.score})
     .then(playlists => res.json(playlists))
     .catch(err => res.status(400).json('Error: ' + err));
 });
+
+
 
 // Delete specific item from database by id
 router.route('/:id').delete((req, res) => {

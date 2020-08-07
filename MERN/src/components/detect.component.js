@@ -46,8 +46,11 @@ export default class Home extends Component {
           let score = JSON.stringify(resultJSON["emotions"]["happiness"])
           console.log('Age: ' + age)
           console.log('Happiness: ' + parseFloat(score))
-          axios.get('http://localhost:5000/playlists/'+score)
-            .then(response => { console.log(response.data)});
+          let rounded = JSON.stringify(Math.round((parseFloat(score) + Number.EPSILON) * 10) / 10)
+          axios.get('http://localhost:5000/playlists/'+rounded)
+            .then(response => {
+              console.log(response.data[0]["link"])
+            });
         });
     }).catch(function (error) {
         console.log(error)

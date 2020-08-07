@@ -31,5 +31,17 @@ Spotif.ai was created using the MERN stack (MongoDB, Express, React, Node.js). A
 
 Although the database must currently be populated manually, a script using [Spotify's open-source API](https://developer.spotify.com/documentation/web-api/) is in the works, allowing new playlists and their corresponding scores to be inputted dynamically. Based on the songs' tempo, genre, and playlist name, a happiness index (float from 0-1) corresponding to the playlist will be generated. Again, this index will be compared to the output of the Microsoft Face API. Working in unison with the API-to-database connection, playlists will be recommended with exponentially increasing accuracy.
 
+## Database Schema
+```
+[
+  {
+    "_id": <unique MongoDB id>
+    "link": <String>,
+    "emotion": <Number>,
+    "age": <Number>,
+  }
+]
+```
+
 ## Contact
 Created by [Aiden Szeto](https://www.linkedin.com/in/aidenszeto/) - feel free to contact me!

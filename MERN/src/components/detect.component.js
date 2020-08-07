@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+require('dotenv').config();
 
 export default class Home extends Component {
   constructor(props) {
@@ -14,7 +15,7 @@ export default class Home extends Component {
   submitForm(e, url) {
     const axios = require('axios').default;
     // Add a valid subscription key and endpoint to your environment variables.
-    let subscriptionKey = "b2cf0902bf004b89b2a5096c2df5e0e3"
+    let subscriptionKey = process.env.API_KEY
     let endpoint = 'https://spotifai.cognitiveservices.azure.com/face/v1.0/detect'
     // Optionally, replace with your own image URL (for example a .jpg or .png URL).
     let imageUrl = url.toString()

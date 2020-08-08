@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-require('dotenv').config();
 
 export default class Home extends Component {
   constructor(props) {
@@ -9,10 +8,13 @@ export default class Home extends Component {
 
       this.state = {
         url: '',
+        emotions: 0,
+        link: ''
       }
   }
 
   submitForm(e, url) {
+    var that = this;
     const axios = require('axios').default;
     // Add a valid subscription key and endpoint to your environment variables.
     let subscriptionKey = process.env.API_KEY
@@ -47,11 +49,13 @@ export default class Home extends Component {
           let score = JSON.stringify(resultJSON["emotions"]["happiness"])
           console.log('Age: ' + age)
           console.log('Happiness: ' + parseFloat(score))
+          that.setState({emotions: parseFloat(score)})
           let rounded = JSON.stringify(Math.round((parseFloat(score) + Number.EPSILON) * 10) / 10)
           axios.get('http://localhost:5000/playlists/'+rounded)
             .then(response => {
               console.log(response.data[0]["link"])
-            });
+              that.setState({link: response.data[0]["link"]})
+          });
         });
     }).catch(function (error) {
         console.log(error)
@@ -83,8 +87,9 @@ export default class Home extends Component {
           <div className="form-group">
             <input type="submit" value="analyze" className="btn btn-primary" />
           </div> <br />
-          <div>
-            <label>check console for playlist!</label>
+          <div className="response">
+            happiness index: {this.state.emotions} <br />
+            <a href={this.state.link}> playlist </a>
           </div>
         </form>
       </div>

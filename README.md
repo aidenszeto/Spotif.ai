@@ -19,7 +19,7 @@ Follow these steps to get started!
 ## Features
 ### Analyze your Image
 Type in the url of your image and click the "analyze image" button to display the detected happiness index and recommended playlist. A playlist link corresponding to your mood ill be pulled from the MongoDB database. The code for this component can be found under [**/MERN/src/components/detect.component.js**](https://github.com/aidenszeto/Spotif.ai/blob/master/MERN/src/components/detect.component.js).
-![Analyze your Image](https://github.com/aidenszeto/Spotif.ai/blob/master/Screenshots/Annotation%202020-08-08%20205340.png)
+![Analyze your Image]()
 ### Playlists
 This page will display the current playlists in your MongoDB database. To edit or delete entries, simply click the link to the right of the playlist and change the values. The code for this component can be found under [**/MERN/src/components/playlist-list.component.js**](https://github.com/aidenszeto/Spotif.ai/blob/master/MERN/src/components/playlist-list.component.js) and [**/MERN/src/components/edit-playlist.component.js**](https://github.com/aidenszeto/Spotif.ai/blob/master/MERN/src/components/edit-list.component.js).
 ![Playlists](https://github.com/aidenszeto/Spotif.ai/blob/master/Screenshots/Annotation%202020-08-08%20205418.png)

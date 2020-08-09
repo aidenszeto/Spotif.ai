@@ -9,7 +9,8 @@ export default class Home extends Component {
       this.state = {
         url: '',
         emotions: 0,
-        link: ''
+        link: '',
+        response: ''
       }
   }
 
@@ -56,6 +57,15 @@ export default class Home extends Component {
               console.log(response.data[0]["link"])
               that.setState({link: response.data[0]["link"]})
           });
+          if (parseFloat(rounded) > 0.5) {
+            that.setState({response: "you are happy :)"})
+          }
+          else if (parseFloat(rounded) == 0.5) {
+            that.setState({response: "you are sad :("})
+          }
+          else {
+            that.setState({response: "you are meh :|"})
+          }
         });
     }).catch(function (error) {
         console.log(error)
@@ -72,7 +82,7 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <h3>analyze image</h3> <br />
+        <h1>analyze image</h1> <br />
         <form onSubmit={(e) => this.submitForm(e, document.getElementById("link").value)}>
           <div className="form-group">
             <label>link: </label>
@@ -87,9 +97,13 @@ export default class Home extends Component {
           <div className="form-group">
             <input type="submit" value="analyze" className="btn btn-primary" />
           </div> <br />
+          <div>
+            <img src={this.state.url} alt="" style={{height: 400}}></img>
+          </div> <br />
           <div className="response">
+            <h3> {this.state.response} </h3>
             happiness index: {this.state.emotions} <br />
-            <a href={this.state.link}> playlist </a>
+            click <a href={this.state.link}> here </a> for your playlist!
           </div>
         </form>
       </div>

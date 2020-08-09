@@ -52,7 +52,7 @@ export default class PlaylistList extends Component {
   render() {
     return (
       <div>
-        <h3>playlists</h3>
+        <h1>playlists</h1>
         <table className="table">
           <thead className="thead-light">
             <tr>

@@ -57,14 +57,14 @@ export default class Home extends Component {
               console.log(response.data[0]["link"])
               that.setState({link: response.data[0]["link"]})
           });
-          if (parseFloat(rounded) > 0.5) {
+          if (parseFloat(rounded) > 0.6) {
             that.setState({response: "you are happy :)"})
           }
-          else if (parseFloat(rounded) == 0.5) {
-            that.setState({response: "you are sad :("})
+          else if (parseFloat(rounded) === 0.5 || parseFloat(rounded) === 0.6) {
+            that.setState({response: "you are meh :|"})
           }
           else {
-            that.setState({response: "you are meh :|"})
+            that.setState({response: "you are sad :("})
           }
         });
     }).catch(function (error) {
@@ -82,7 +82,7 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <h1>analyze image</h1> <br />
+        <h1 className="App">analyze image</h1> <br />
         <form onSubmit={(e) => this.submitForm(e, document.getElementById("link").value)}>
           <div className="form-group">
             <label>link: </label>
@@ -97,10 +97,10 @@ export default class Home extends Component {
           <div className="form-group">
             <input type="submit" value="analyze" className="btn btn-primary" />
           </div> <br />
-          <div>
-            <img src={this.state.url} alt="" style={{height: 400}}></img>
+          <div className="App">
+            <img src={this.state.url} alt="" style={{height: 500}}></img>
           </div> <br />
-          <div className="response">
+          <div className="App">
             <h3> {this.state.response} </h3>
             happiness index: {this.state.emotions} <br />
             click <a href={this.state.link}> here </a> for your playlist!

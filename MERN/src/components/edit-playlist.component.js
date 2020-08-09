@@ -70,7 +70,7 @@ export default class EditPlaylist extends Component {
   render() {
     return(
       <div>
-        <h3>edit playlist</h3>
+        <h1 className="App">edit playlist</h1>
         <form onSubmit={this.onSubmit}>
           <div className="form-group">
             <label>link: </label>

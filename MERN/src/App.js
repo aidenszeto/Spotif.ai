@@ -8,6 +8,8 @@ import CreatePlaylist from "./components/create-playlist.component";
 import EditPlaylist from "./components/edit-playlist.component"
 import Detect from "./components/detect.component"
 
+import "./components/css/App.css";
+
 function App() {
   return (
     <Router>

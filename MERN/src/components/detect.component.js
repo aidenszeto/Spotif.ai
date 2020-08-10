@@ -18,7 +18,7 @@ export default class Home extends Component {
     var that = this;
     const axios = require('axios').default;
     // Add a valid subscription key and endpoint to your environment variables.
-    let subscriptionKey = process.env.API_KEY
+    let subscriptionKey = "b2cf0902bf004b89b2a5096c2df5e0e3"
     let endpoint = 'https://spotifai.cognitiveservices.azure.com/face/v1.0/detect'
     // Optionally, replace with your own image URL (for example a .jpg or .png URL).
     let imageUrl = url.toString()

@@ -54,13 +54,21 @@ export default class Home extends Component {
           let rounded = JSON.stringify(Math.round((parseFloat(score) + Number.EPSILON) * 10) / 10)
           axios.get('http://localhost:5000/playlists/'+rounded)
             .then(response => {
-              console.log(response.data[0]["link"])
-              that.setState({link: response.data[0]["link"]})
+              let len = response.data.length
+              if (len > 1)
+              {
+                console.log(response.data[Math.floor(Math.random() * len)]["link"])
+                that.setState({link: response.data[Math.floor(Math.random() * len)]["link"]})
+              }
+              else {
+                console.log(response.data[0]["link"])
+                that.setState({link: response.data[0]["link"]})
+              }
           });
           if (parseFloat(rounded) > 0.6) {
             that.setState({response: "you are happy :)"})
           }
-          else if (parseFloat(rounded) === 0.5 || parseFloat(rounded) === 0.6) {
+          else if (parseFloat(rounded) >= 0.4 || parseFloat(rounded) <= 0.6) {
             that.setState({response: "you are meh :|"})
           }
           else {

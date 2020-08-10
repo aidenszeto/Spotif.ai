@@ -55,7 +55,7 @@ export default class CreatePlaylist extends Component {
 
   render() {
     return(
-      <div>
+      <div className="container">
         <h1 className="App">add playlist</h1>
         <form onSubmit={this.onSubmit}>
           <div className="form-group">
@@ -91,6 +91,7 @@ export default class CreatePlaylist extends Component {
             <input type="submit" value="add playlist" className="btn btn-primary" />
           </div>
         </form>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
       </div>
       )
     }

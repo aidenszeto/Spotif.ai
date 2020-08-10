@@ -105,6 +105,7 @@ export default class EditPlaylist extends Component {
             <input type="submit" value="edit playlist" className="btn btn-primary" />
           </div>
         </form>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
       </div>
       )
     }

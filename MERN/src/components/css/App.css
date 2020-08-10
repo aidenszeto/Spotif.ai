@@ -1,5 +1,22 @@
 .App {
   text-align: center;
+  background-color: #D1FFEA;
+  min-height: 100%;
+}
+
+.form-group {
+  text-align: left;
+  width: 1000px;
+  align: center;
+}
+
+.form-control {
+  text-align: left;
+}
+
+.table {
+  background-color: #d0dcd7;
+  text-align: left;
 }
 
 .Body {
@@ -36,6 +53,10 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.main-wrapper {
+  min-height: 100%;
 }
 
 

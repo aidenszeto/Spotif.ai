@@ -13,13 +13,15 @@ import "./components/css/App.css";
 function App() {
   return (
     <Router>
-      <div className="container">
+      <div className="App">
+        <div className="main-wrapper">
         <Navbar />
         <br/>
         <Route path="/" exact component={Detect} />
         <Route path="/playlists" component={PlaylistList} />
         <Route path="/create" component={CreatePlaylist} />
         <Route path="/edit/:id" component={EditPlaylist} />
+        </div>
       </div>
     </Router>
   );

@@ -51,8 +51,8 @@ export default class PlaylistList extends Component {
 
   render() {
     return (
-      <div>
-        <h1>playlists</h1>
+      <div className="container">
+        <h1>playlists</h1> <br />
         <table className="table">
           <thead className="thead-light">
             <tr>
@@ -66,6 +66,7 @@ export default class PlaylistList extends Component {
             { this.playlistList() }
           </tbody>
         </table>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
       </div>
     )
   }

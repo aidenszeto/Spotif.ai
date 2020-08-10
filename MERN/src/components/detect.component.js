@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 export default class Home extends Component {
   constructor(props) {
       super(props);
@@ -89,11 +90,11 @@ export default class Home extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <h1 className="App">analyze image</h1> <br />
         <form onSubmit={(e) => this.submitForm(e, document.getElementById("link").value)}>
           <div className="form-group">
-            <label>link: </label>
+          <label className="App">image url: </label>
             <input type="text"
                 id="link"
                 required
@@ -114,6 +115,7 @@ export default class Home extends Component {
             click <a href={this.state.link}> here </a> for your playlist!
           </div>
         </form>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
       </div>
     )
   }

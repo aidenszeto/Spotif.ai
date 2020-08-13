@@ -48,8 +48,12 @@ for track in track_list:
         score *= 1.3
     track_scores += score
 
+# Average the rounded track values and fix bounds
 average = round(track_scores/len(track_list), 1)
 if average > 1:
     average = 1
 elif average < 0:
     average = 0
+
+my_col.update_one({'_id': ObjectId(str(id))}, {'$set': {'emotions': average}})
+print(f'Happiness index for {id} set to {average}')

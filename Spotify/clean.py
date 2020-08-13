@@ -37,10 +37,10 @@ track_scores = 0
 for track in track_list:
     id = track['track']['id']
     features = sp.audio_features(tracks=[id])
-    tempo = round(features[0]['tempo']/100,2)
+    tempo = features[0]['tempo']/100,2
     energy = features[0]['energy']
-    score = round((tempo + energy + playlists['emotion'])/3,1)
+    score = tempo + energy + playlists['emotion']
     track_scores += score
 
-print(len(track_list))
 print(track_scores)
+#print(track_scores/len(track_list))

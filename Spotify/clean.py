@@ -37,11 +37,18 @@ track_scores = 0
 for track in track_list:
     id = track['track']['id']
     features = sp.audio_features(tracks=[id])
-    tempo = features[0]['tempo']/100
+    dance = features[0]['danceability']
     energy = features[0]['energy']
-    score = (tempo + energy + playlists['emotion'])/3
-    if score < 0.5:
+    score = (dance + energy + playlists['emotion'])/3
+    if score < 0.6:
         score *= 0.7
+    elif score > 0.6:
+        score *= 1.3
     track_scores += score
 
-print(track_scores/len(track_list))
+average = round(track_scores/len(track_list), 1)
+if average > 1:
+    average = 1
+elif average < 0:
+    average = 0
+print(average)

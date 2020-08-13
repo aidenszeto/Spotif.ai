@@ -55,5 +55,5 @@ if average > 1:
 elif average < 0:
     average = 0
 
-my_col.update_one({'_id': ObjectId(str(input_id))}, {'$set': {'emotions': average}})
+my_col.update_one({'_id': ObjectId(str(input_id))}, {'$set': {'emotion': average}})
 print(f'Happiness index for {input_id} set to {average}')

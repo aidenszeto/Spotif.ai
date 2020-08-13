@@ -34,6 +34,8 @@ id = link[34:56]
 tracks = sp.playlist_tracks(id, fields='items(track(id))', limit=50)
 track_list = tracks['items']
 track_scores = 0
+
+# Calculate new happiness index based on danceability and energy
 for track in track_list:
     id = track['track']['id']
     features = sp.audio_features(tracks=[id])
@@ -51,4 +53,3 @@ if average > 1:
     average = 1
 elif average < 0:
     average = 0
-print(average)

@@ -25,8 +25,8 @@ client_credentials_manager = SpotifyClientCredentials(client_id, client_secret)
 sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
 # Convert items to list and iterate
-id = input('Enter ID: ')
-playlists = my_col.find_one({'_id': ObjectId(str(id))})
+input_id = input('Enter ID: ')
+playlists = my_col.find_one({'_id': ObjectId(str(input_id))})
 link = playlists['link']
 id = link[34:56]
 
@@ -55,5 +55,5 @@ if average > 1:
 elif average < 0:
     average = 0
 
-my_col.update_one({'_id': ObjectId(str(id))}, {'$set': {'emotions': average}})
-print(f'Happiness index for {id} set to {average}')
+my_col.update_one({'_id': ObjectId(str(input_id))}, {'$set': {'emotions': average}})
+print(f'Happiness index for {input_id} set to {average}')

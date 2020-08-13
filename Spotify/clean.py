@@ -30,5 +30,9 @@ for i in range(len):
     link = playlists[i]['link']
     id = link[34:56]
 
-    tracks = sp.playlist_tracks('1ztgyXj8nULNmEgmPcvWIe', fields='items(track(name))', limit=50)
-    print(tracks)
+tracks = sp.playlist_tracks('1ztgyXj8nULNmEgmPcvWIe', fields='items(track(id))', limit=50)
+track_list = tracks['items']
+track_ids = []
+for track in track_list:
+    track_ids.append(track['track']['id'])
+    print(track_ids)

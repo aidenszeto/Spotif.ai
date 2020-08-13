@@ -37,7 +37,6 @@ export default class CreatePlaylist extends Component {
 
   onSubmit(e) {
     e.preventDefault();
-
     const playlist = {
       link: this.state.link,
       emotion: this.state.emotion,

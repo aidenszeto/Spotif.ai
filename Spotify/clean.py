@@ -25,7 +25,7 @@ client_credentials_manager = SpotifyClientCredentials(client_id, client_secret)
 sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
 # Convert items to list and iterate
-input_id = input('Enter ID: ')
+input_id = input('Enter ID: ').strip()
 playlists = my_col.find_one({'_id': ObjectId(str(input_id))})
 link = playlists['link']
 id = link[34:56]

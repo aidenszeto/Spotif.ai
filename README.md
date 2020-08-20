@@ -53,9 +53,9 @@ Separate from the MERN app, the [**clean.py**](https://github.com/aidenszeto/Spo
 
 These values, in conjunction with the user-inputted index) are averaged for each track, and averaged for the entire playlist, providing a more accurate happiness level for the playlist. The reason for including the user-inputted value is to nullify anomalies. In some instances, a song may still hold emotionally-happy value even though it's danceability, energy, and tempo say otherwise. Using the value that the user inputs takes human preferance into account while re-determining the new happiness index.
 
-The user also has the option to run [**clean.py**](https://github.com/aidenszeto/Spotif.ai/blob/master/Spotify/clean.py) for all database entries. To do this, 'all' must be inputted to the Entry ID instead of one of the database's object IDs. As a result, the script will iterate through every item in the database and perform the emotional index algorithm on each one, updating the user-inputted values with calculated ones. 
+The user also has the option to run [**clean.py**](https://github.com/aidenszeto/Spotif.ai/blob/master/Spotify/clean.py) for all database entries. To do this, 'all' must be inputted to the Entry ID instead of one of the database's object IDs. As a result, the script will iterate through every item in the database and perform the emotional index algorithm on each one, updating the user-inputted values with calculated ones. However, once the script cleans an entry in the database, a new boolean field, 'cleaned', is set to true, allowing it to be skipped in the next pass.
 
-*Note: running [**clean.py**](https://github.com/aidenszeto/Spotif.ai/blob/master/Spotify/clean.py) will take more time if the database is large.*
+*Note: running [**clean.py**](https://github.com/aidenszeto/Spotif.ai/blob/master/Spotify/clean.py) will take more time if the database has a large number of uncleaned items.*
 
 ## Contact
 Created by [Aiden Szeto](https://www.linkedin.com/in/aidenszeto/) - feel free to contact me!

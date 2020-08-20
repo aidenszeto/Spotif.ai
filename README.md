@@ -4,8 +4,12 @@ Spotif.ai automatically detects your mood and recommends you the perfect Spotify
 
 ## Table of Contents
 - [Prerequisites](https://github.com/aidenszeto/Spotif.ai/blob/master/README.md#prerequisites)
-- [Getting Started](https://github.com/aidenszeto/Spotif.ai/blob/master/README.md#prerequisites)
+- [Getting Started](https://github.com/aidenszeto/Spotif.ai/blob/master/README.md#getting-started)
 - [Features](https://github.com/aidenszeto/Spotif.ai/blob/master/README.md#features)
+- [How it Works](https://github.com/aidenszeto/Spotif.ai/blob/master/README.md#how-it-works)
+- [Database Schema](https://github.com/aidenszeto/Spotif.ai/blob/master/README.md#database-schema)
+- [Spotify API](https://github.com/aidenszeto/Spotif.ai/blob/master/README.md#spotify-API)
+- [Contact](https://github.com/aidenszeto/Spotif.ai/blob/master/README.md#contact)
 
 ## Prerequisites
 Please install the following before cloning:

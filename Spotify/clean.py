@@ -31,7 +31,7 @@ input_id = input('Enter ID: ').strip()
 if input_id == 'all':
     for playlists in my_col.find():
         # Get playlist ID from playlist link and entry_ID from object ID
-        entry_id = playlists[]
+        entry_id = playlists['_id']
         link = playlists['link']
         id = link[34:56]
 

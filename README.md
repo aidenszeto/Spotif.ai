@@ -3,13 +3,13 @@ Too lazy to search for a playlist that fits your mood? Just upload a picture of 
 Spotif.ai automatically detects your mood and recommends you the perfect Spotify playlist. Try it out!
 
 ## Table of Contents
-- [Prerequisites](https://github.com/aidenszeto/Spotif.ai/blob/master/README.md#prerequisites)
-- [Getting Started](https://github.com/aidenszeto/Spotif.ai/blob/master/README.md#getting-started)
-- [Features](https://github.com/aidenszeto/Spotif.ai/blob/master/README.md#features)
-- [How it Works](https://github.com/aidenszeto/Spotif.ai/blob/master/README.md#how-it-works)
-- [Database Schema](https://github.com/aidenszeto/Spotif.ai/blob/master/README.md#database-schema)
-- [Spotify API](https://github.com/aidenszeto/Spotif.ai/blob/master/README.md#spotify-API)
-- [Contact](https://github.com/aidenszeto/Spotif.ai/blob/master/README.md#contact)
+- [Prerequisites](https://github.com/aidenszeto/Spotif.ai#prerequisites)
+- [Getting Started](https://github.com/aidenszeto/Spotif.ai#getting-started)
+- [Features](https://github.com/aidenszeto/Spotif.ai#features)
+- [How it Works](https://github.com/aidenszeto/Spotif.ai#how-it-works)
+- [Database Schema](https://github.com/aidenszeto/Spotif.ai#database-schema)
+- [Spotify API](https://github.com/aidenszeto/Spotif.ai#spotify-API)
+- [Contact](https://github.com/aidenszeto/Spotif.ai#contact)
 
 ## Prerequisites
 Please install the following before cloning:
@@ -93,4 +93,4 @@ Created by [Aiden Szeto](https://www.linkedin.com/in/aidenszeto/) - feel free to
 
 
 
-[Return to the Top](https://github.com/aidenszeto/Spotif.ai/blob/master/README.md#spotifai)
+[Return to the Top](https://github.com/aidenszeto/Spotif.ai#spotifai)

@@ -2,6 +2,19 @@
 Too lazy to search for a playlist that fits your mood? Just upload a picture of yourself and Spotif.ai will take care of the rest for you! Using facial recognition software, 
 Spotif.ai automatically detects your mood and recommends you the perfect Spotify playlist. Try it out!
 
+## Prerequisites
+Please install the following before cloning:
+```
+   npm install mongoose
+   npm install express
+   npm install cors
+   npm install dotenv
+   npm install nodemon
+   npm install bootstrap
+   npm install react-router-dom
+   npm install axios
+```
+
 ## Getting Started
 Follow these steps to get started!
 - Clone this repository to download the code

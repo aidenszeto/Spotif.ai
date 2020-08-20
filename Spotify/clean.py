@@ -30,6 +30,8 @@ input_id = input('Enter ID: ').strip()
 # Clean entire database if input is 'all'
 if input_id == 'all':
     for playlists in my_col.find():
+        if playlists['cleaned'] == True:
+            continue
         # Get playlist ID from playlist link and entry_ID from object ID
         entry_id = playlists['_id']
         link = playlists['link']
@@ -68,6 +70,9 @@ if input_id == 'all':
 else:
     # Convert items to list and iterate
     playlists = my_col.find_one({'_id': ObjectId(str(input_id))})
+    if playlists['cleaned'] == True:
+        break
+
     link = playlists['link']
     id = link[34:56]
 

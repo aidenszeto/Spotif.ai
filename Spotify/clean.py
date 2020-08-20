@@ -29,8 +29,9 @@ input_id = input('Enter ID: ').strip()
 
 # Clean entire database if input is 'all'
 if input_id == 'all':
-    for item in my_col:
-        # Get playlist ID from playlist link
+    for playlists in my_col.find():
+        # Get playlist ID from playlist link and entry_ID from object ID
+        entry_id = playlists[]
         link = playlists['link']
         id = link[34:56]
 
@@ -59,8 +60,8 @@ if input_id == 'all':
         elif average < 0:
             average = 0
 
-        my_col.update_one({'_id': ObjectId(str(input_id))}, {'$set': {'emotion': average}})
-        print(f'Happiness index for {input_id} set to {average}')
+        my_col.update_one({'_id': ObjectId(str(entry_id))}, {'$set': {'emotion': average}})
+        print(f'Happiness index for {entry_id} set to {average}')
 
 # Clean entry with specified ID
 else:

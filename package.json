@@ -4,10 +4,8 @@
   "description": "",
   "main": "backend.js",
   "scripts": {
-    "start": "react-scripts start",
-      "build": "react-scripts build",
-      "test": "react-scripts test --env=jsdom",
-      "eject": "react-scripts eject"
+    "start": "nodemon MERN/backend/server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build"
   },
   "repository": {
     "type": "git",
@@ -23,5 +21,7 @@
   "dependencies": {
     "dotenv": "^8.2.0"
   },
-  "proxy": "http://localhost:8000"
+  "engines": {
+      "node": "10.16.0"
+  }
 }

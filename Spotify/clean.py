@@ -61,6 +61,7 @@ if input_id == 'all':
             average = 0
 
         my_col.update_one({'_id': ObjectId(str(entry_id))}, {'$set': {'emotion': average}})
+        my_col.update_one({'_id': ObjectId(str(entry_id))}, {'$set': {'cleaned': True}})
         print(f'Happiness index for {entry_id} set to {average}')
 
 # Clean entry with specified ID

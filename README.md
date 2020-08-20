@@ -48,6 +48,14 @@ Additionally, a script using [Spotify's open-source API](https://developer.spoti
 **emotion:** decimal value for playlists' happiness index\
 **age:** integer value used to determine recommendation accuracy
 
+In some cases, the database schema may look slightly different, with the following field:
+```
+ {
+  "cleaned": <Boolean>
+ }
+```
+**cleaned**: boolean value distinguishing entries with calculated emotion index
+
 ## Spotify API
 Separate from the MERN app, the [**clean.py**](https://github.com/aidenszeto/Spotif.ai/blob/master/Spotify/clean.py) file dynamically determines happiness indexs for each playlist. Following a new, manual playlist entry by a user, the python script recalculates an accurate emotion value. The playlist is parsed through [Spotify API](https://developer.spotify.com/documentation/web-api/) and the [spotipy library](https://spotipy.readthedocs.io/en/2.13.0/) to receive the danceability, energy, and tempo for each individual track. 
 

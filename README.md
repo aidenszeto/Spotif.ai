@@ -5,14 +5,14 @@ Spotif.ai automatically detects your mood and recommends you the perfect Spotify
 ## Prerequisites
 Please install the following before cloning:
 ```
-   npm install mongoose
-   npm install express
-   npm install cors
-   npm install dotenv
-   npm install nodemon
-   npm install bootstrap
-   npm install react-router-dom
-   npm install axios
+  npm install mongoose
+  npm install express
+  npm install cors
+  npm install dotenv
+  npm install nodemon
+  npm install bootstrap
+  npm install react-router-dom
+  npm install axios
 ```
 
 ## Getting Started

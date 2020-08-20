@@ -91,4 +91,4 @@ The user also has the option to run [**clean.py**](https://github.com/aidenszeto
 ## Contact
 Created by [Aiden Szeto](https://www.linkedin.com/in/aidenszeto/) - feel free to contact me!
 
-[Return to the Top](https://github.com/aidenszeto/Spotif.ai/blob/master/README.md#Spotif.ai)
+[Return to the Top](https://github.com/aidenszeto/Spotif.ai/blob/master/README.md#spotifai)

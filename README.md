@@ -48,7 +48,8 @@ Additionally, a script using [Spotify's open-source API](https://developer.spoti
 **emotion:** decimal value for playlists' happiness index\
 **age:** integer value used to determine recommendation accuracy
 
-In some cases, the database schema may look slightly different, with the following field:
+
+However, [**clean.py**](https://github.com/aidenszeto/Spotif.ai/blob/master/Spotify/clean.py) is run on a database entry, a new field will appear. This field is used to distinguish user-inputted emotional indices from algorithm-calculatted onces, allowing the clean script to more efficiently parse through the database. Consequently, the database schema may look slightly different, with the following field:
 ```
  {
   "cleaned": <Boolean>

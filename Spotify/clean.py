@@ -6,6 +6,7 @@ import pandas as pd
 import time
 import json
 from bson.objectid import ObjectId
+from sys import exit
 
 
 load_dotenv()
@@ -73,7 +74,7 @@ else:
     playlists = my_col.find_one({'_id': ObjectId(str(input_id))})
     if playlists['cleaned'] == True:
         print(f'{input_id} already cleaned')
-        exit
+        exit()
 
     link = playlists['link']
     id = link[34:56]

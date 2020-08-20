@@ -72,7 +72,7 @@ else:
     # Convert items to list and iterate
     playlists = my_col.find_one({'_id': ObjectId(str(input_id))})
     if playlists['cleaned'] == True:
-        print(f'{item_id} already cleaned')
+        print(f'{input_id} already cleaned')
         exit
 
     link = playlists['link']

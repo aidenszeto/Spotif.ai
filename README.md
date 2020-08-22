@@ -89,7 +89,7 @@ The user also has the option to run [**clean.py**](https://github.com/aidenszeto
 *Note: running [**clean.py**](https://github.com/aidenszeto/Spotif.ai/blob/master/Spotify/clean.py) will take more time if the database has a large number of uncleaned items.*
 
 ## Contact
-Created by [Aiden Szeto](http://aidenszeto.me/) - feel free to contact me!
+Created by [Aiden Szeto](http://aidenszeto.me/) - feel free to contact me!\
 
 
 

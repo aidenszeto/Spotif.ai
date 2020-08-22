@@ -2,19 +2,41 @@
 Too lazy to search for a playlist that fits your mood? Just upload a picture of yourself and Spotif.ai will take care of the rest for you! Using facial recognition software, 
 Spotif.ai automatically detects your mood and recommends you the perfect Spotify playlist. Try it out!
 
+## Table of Contents
+- [Prerequisites](https://github.com/aidenszeto/Spotif.ai#prerequisites)
+- [Getting Started](https://github.com/aidenszeto/Spotif.ai#getting-started)
+- [Features](https://github.com/aidenszeto/Spotif.ai#features)
+- [How it Works](https://github.com/aidenszeto/Spotif.ai#how-it-works)
+- [Database Schema](https://github.com/aidenszeto/Spotif.ai#database-schema)
+- [Spotify API](https://github.com/aidenszeto/Spotif.ai#spotify-API)
+- [Contact](https://github.com/aidenszeto/Spotif.ai#contact)
+
+## Prerequisites
+Please install the following before cloning:
+```
+ npm install mongoose
+ npm install express
+ npm install cors
+ npm install dotenv
+ npm install nodemon
+ npm install bootstrap
+ npm install react-router-dom
+ npm install axios
+```
+
 ## Getting Started
 Follow these steps to get started!
-- Clone this repository to download the code
-- Retrieve free API key and corresponding endpoint for [Microsoft Face](https://azure.microsoft.com/en-us/services/cognitive-services/face/) from Azure Cognitive Services
-- Set up [MongoDB](https://www.mongodb.com/) database and retrieve custom uri by connecting by network
-- Add API key, MongoDB URI, and custom endpoint (if different from code) to .env file as follows\
+1. Clone this repository to download the code
+2. Retrieve free API key and corresponding endpoint for [Microsoft Face](https://azure.microsoft.com/en-us/services/cognitive-services/face/) from Azure Cognitive Services
+3. Set up [MongoDB](https://www.mongodb.com/) database and retrieve custom uri by connecting by network
+4. Add API key, MongoDB URI, and custom endpoint (if different from code) to .env file as follows
  ```
     ATLAS_URI=<custom_uri>
     API_KEY=<azure_key>
     ENDPOINT=<azure_endpoint>
  ```
-- Once your database is connected, run ``nodemon server`` and ``npm start``
-- Test out your web app with different image urls!
+5. Once your database is connected, run ``nodemon server`` and ``npm start``
+6. Test out your web app with different image urls!
 
 ## Features
 ### Analyze your Image
@@ -48,6 +70,15 @@ Additionally, a script using [Spotify's open-source API](https://developer.spoti
 **emotion:** decimal value for playlists' happiness index\
 **age:** integer value used to determine recommendation accuracy
 
+
+However, [**clean.py**](https://github.com/aidenszeto/Spotif.ai/blob/master/Spotify/clean.py) is run on a database entry, a new field will appear. This field is used to distinguish user-inputted emotional indices from algorithm-calculatted onces, allowing the clean script to more efficiently parse through the database. Consequently, the database schema may look slightly different, with the following field:
+```
+ {
+  "cleaned": <Boolean>
+ }
+```
+**cleaned**: boolean value distinguishing entries with calculated emotion index
+
 ## Spotify API
 Separate from the MERN app, the [**clean.py**](https://github.com/aidenszeto/Spotif.ai/blob/master/Spotify/clean.py) file dynamically determines happiness indexs for each playlist. Following a new, manual playlist entry by a user, the python script recalculates an accurate emotion value. The playlist is parsed through [Spotify API](https://developer.spotify.com/documentation/web-api/) and the [spotipy library](https://spotipy.readthedocs.io/en/2.13.0/) to receive the danceability, energy, and tempo for each individual track. 
 
@@ -59,3 +90,7 @@ The user also has the option to run [**clean.py**](https://github.com/aidenszeto
 
 ## Contact
 Created by [Aiden Szeto](https://www.linkedin.com/in/aidenszeto/) - feel free to contact me!
+
+
+
+[Return to the Top](https://github.com/aidenszeto/Spotif.ai#spotifai)

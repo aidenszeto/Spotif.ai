@@ -92,4 +92,4 @@ The user also has the option to run [**clean.py**](https://github.com/aidenszeto
 Created by [Aiden Szeto](http://aidenszeto.me/) - feel free to contact me!
 <br /><br />
 
-[Return to the Top](https://github.com/aidenszeto/Spotif.ai#spotifai)
+[Return to the Top](https://github.com/aidenszeto/Spotif.ai)

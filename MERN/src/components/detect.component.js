@@ -52,9 +52,24 @@ export default class Home extends Component {
           console.log('Happiness: ' + parseFloat(score))
           that.setState({emotions: parseFloat(score)})
           let rounded = JSON.stringify(Math.round((parseFloat(score) + Number.EPSILON) * 10) / 10)
-          if parseInt(age) >= 18
+          if (parseInt(age) >= 18)
           {
             axios.get('http://localhost:5000/playlists/'+rounded)
+              .then(response => {
+                let len = response.data.length
+                if (len > 1)
+                {
+                  console.log(response.data[Math.floor(Math.random() * len)]["link"])
+                  that.setState({link: response.data[Math.floor(Math.random() * len)]["link"]})
+                }
+                else {
+                  console.log(response.data[0]["link"])
+                  that.setState({link: response.data[0]["link"]})
+                }
+            });
+          }
+          else {
+            axios.get('http://localhost:5000/playlists/clean/'+rounded)
               .then(response => {
                 let len = response.data.length
                 if (len > 1)

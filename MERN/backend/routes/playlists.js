@@ -25,7 +25,7 @@ router.route('/add').post((req, res) => {
   .catch(err => res.status(400).json('Error: ' + err));
 });
 
-// Get specific item from database by id
+// Get specific item from database by score
 router.route('/:score').get((req, res) => {
   Playlist.find({emotion: req.params.score})
     .then(

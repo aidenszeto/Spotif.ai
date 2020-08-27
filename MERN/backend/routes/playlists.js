@@ -33,6 +33,13 @@ router.route('/:score').get((req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
+// Get specific item from database by score if under 18
+router.route('/clean/:score').get((req, res) => {
+  Playlist.find({emotion: req.params.score, clean: true})
+    .then(
+      playlists => res.json(playlists))
+    .catch(err => res.status(400).json('Error: ' + err));
+});
 
 // Delete specific item from database by id
 router.route('/:id').delete((req, res) => {

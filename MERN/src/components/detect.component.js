@@ -94,6 +94,7 @@ export default class Home extends Component {
           }
         });
     }).catch(function (error) {
+        that.setState({response: "no playlists found :("})
         console.log(error)
     });
     e.preventDefault();

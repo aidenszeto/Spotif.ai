@@ -18,6 +18,7 @@ router.route('/add').post((req, res) => {
     link,
     emotion,
     age,
+    clean
   });
 
   newPlaylist.save()

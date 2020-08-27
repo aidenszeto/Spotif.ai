@@ -35,7 +35,7 @@ router.route('/:score').get((req, res) => {
 
 // Get specific item from database by score if under 18
 router.route('/clean/:score').get((req, res) => {
-  Playlist.find({emotion: req.params.score, clean: true})
+  Playlist.find({emotion: req.params.score, clean: True})
     .then(
       playlists => res.json(playlists))
     .catch(err => res.status(400).json('Error: ' + err));

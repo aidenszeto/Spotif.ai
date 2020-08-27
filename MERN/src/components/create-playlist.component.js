@@ -13,7 +13,8 @@ export default class CreatePlaylist extends Component {
       this.state = {
         link: '',
         emotion: 0.0,
-        age: 0
+        age: 0,
+        clean: False
       }
   }
 
@@ -41,6 +42,12 @@ export default class CreatePlaylist extends Component {
       link: this.state.link,
       emotion: this.state.emotion,
       age: this.state.age
+    }
+    if (this.state.age < 18)
+    {
+      const playlist = {
+        clean: True
+      }
     }
 
     console.log(playlist);
